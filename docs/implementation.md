@@ -75,6 +75,10 @@ lediglich die anfängliche Bildschirmauswahl ist auf drei Minuten begrenzt.
 
 ## Erprobte Kombination
 
+Der praktische Nachweis stammt aus dem ursprünglichen Aufbau vor der
+Paketierung. Für den Umfang der Paketprüfungen und die noch fehlenden Praxistests
+siehe [Testumfang und bestätigter Stand](testumfang.md).
+
 - Fedora 44, x86_64, GNOME auf Wayland;
 - WPP20 USB-ID `6993:b022`, Firmware `81.354.0.25`;
 - Launcher `1.0.0.119`, Yealink-MCore-Raumsystem;

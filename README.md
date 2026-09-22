@@ -10,6 +10,13 @@ Bildübertragung und ein einzelner Mauszeiger funktionieren. Andere Buttons,
 Empfänger und Firmwarestände sind nicht automatisch kompatibel. Dies ist kein
 ClickShare-Treiber und keine allgemeine Unterstützung für alle Yealink-Produkte.
 
+**Teststand:** Die bestätigte Übertragung erfolgte mit dem ursprünglichen Aufbau
+auf einem Lenovo ThinkPad E15 Gen 4 (Ryzen 7 5825U), Fedora 44 und GNOME 50.5
+auf Wayland. Die daraus erstellte Paketversion wurde installiert und technisch
+geprüft; ein erneuter Test mit Button und Raumbildschirm steht noch aus.
+Die [Testnotiz mit Systemversionen, bestätigten Funktionen und offenen Punkten](docs/testumfang.md)
+dokumentiert den genauen Umfang, einschließlich der Grenzen der CI-Prüfungen.
+
 ## Tägliche Nutzung
 
 Nach der einmaligen Installation:
