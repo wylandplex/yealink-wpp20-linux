@@ -1,0 +1,21 @@
+name: Checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python unit tests (no hardware or proprietary binaries)
+        run: python3 -m unittest discover -s tests -v
+      - name: Syntax checks
+        run: |
+          python3 -m compileall -q wpp20lib
+          bash -n install.sh uninstall.sh system/install-fedora.sh
+      - name: Keep releases source-only
+        run: |
+          if git ls-files | grep -Ei '\.(exe|dll|sys|rpm|log|acl|disasm|zip|tar|xz)$|(^|/)(prefix|runner|logs)/'; then
+            echo 'Runtime files must not be committed.' >&2
+            exit 1
+          fi

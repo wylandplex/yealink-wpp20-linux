@@ -1,0 +1,3 @@
+# Access for the active local desktop user only. Install before 73-seat-late.rules.
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="6993", ATTR{idProduct}=="b022", TAG+="uaccess"
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="6993", ATTRS{idProduct}=="b022", TAG+="uaccess"

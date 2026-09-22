@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+"""Yealink WPP20 command line entry point (system Python supplies PyGObject)."""
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from wpp20lib.cli import main
+
+raise SystemExit(main())
