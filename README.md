@@ -12,7 +12,8 @@ ClickShare-Treiber und keine allgemeine Unterstützung für alle Yealink-Produkt
 
 **Teststand:** Die bestätigte Übertragung erfolgte mit dem ursprünglichen Aufbau
 auf einem Lenovo ThinkPad E15 Gen 4 (Ryzen 7 5825U), Fedora 44 und GNOME 50.5
-auf Wayland. Die daraus erstellte Paketversion wurde installiert und technisch
+auf Wayland. Der Benutzer bestätigte für diese Variante **etwa 1,5 Stunden
+stabilen Betrieb am 21. September 2026**. Die daraus erstellte Paketversion wurde installiert und technisch
 geprüft; ein erneuter Test mit Button und Raumbildschirm steht noch aus.
 Die [Testnotiz mit Systemversionen, bestätigten Funktionen und offenen Punkten](docs/testumfang.md)
 dokumentiert den genauen Umfang, einschließlich der Grenzen der CI-Prüfungen.

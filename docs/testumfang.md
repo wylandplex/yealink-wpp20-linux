@@ -6,7 +6,9 @@ Paketversion: [`904889e`](https://github.com/wylandplex/yealink-wpp20-linux/comm
 (`0.1.0`). Diese Notiz dokumentiert einen einzelnen lokalen Testaufbau.
 
 **Bestätigt ist die Bildübertragung mit dem ursprünglichen Aufbau und genau
-einem Mauszeiger.** Die anschließend daraus erstellte Paketversion wurde auf
+einem Mauszeiger. Der Benutzer bestätigte am 22. September außerdem etwa
+1,5 Stunden stabilen Betrieb dieser Variante am 21. September.**
+Die anschließend daraus erstellte Paketversion wurde auf
 demselben Laptop installiert und technisch geprüft. Eine erneute Übertragung
 mit dieser Paketversion zum Raumbildschirm war mangels angeschlossenem Button
 bei den Abschlussprüfungen nicht möglich. Dieser letzte Praxistest ist offen.
@@ -63,6 +65,7 @@ erfolgreichen Testaufbau.
 | Verbindung zum Raumsystem | In Funkreichweite Verbindung hergestellt und Präsentationssoftware nachgeladen |
 | Echter Laptopbildschirm erscheint | Nach Auswahl im GNOME-Portal und Drücken des Buttons vom Benutzer am Raumbildschirm bestätigt |
 | Genau ein Mauszeiger | Nach der privaten `GetCursorInfo`-Korrektur ausdrücklich vom Benutzer bestätigt |
+| Etwa 1,5 Stunden stabiler Betrieb | Vom Benutzer am 22. September für die ursprüngliche Variante am 21. September bestätigt; entspricht etwa 90 Minuten, keine instrumentierte Dauermessung |
 | Erneuter Start nach Abziehen/Einstecken | Im ursprünglichen Aufbau erfolgreich protokolliert; kein Nachweis für den neuen udev-/Dienststartweg |
 | Frühere Abbruchursache nach etwa einer Minute entfernt | Die fehlschlagende periodische sudo-Prüfung wurde entfernt; die anschließende Sitzung blieb über diese Grenze hinaus aktiv |
 
@@ -72,9 +75,10 @@ privater Wine-/Yealink-Client → WPP20 → Raumsystem.
 Im ursprünglichen Aufbau wurden die Geräteberechtigungen vorübergehend über
 ACLs vergeben. Das Paket verwendet dafür eine neu eingerichtete udev-Regel.
 
-Es gab einen zeitlich begrenzten Fünfminutentest, dessen Ende dem gesetzten
-Zeitlimit entsprach. Daraus lässt sich **keine Langzeitstabilität der abschließend
-korrigierten oder der später paketierten Version** ableiten. Eine belastbare
+Ein früherer Fünfminutentest endete am gesetzten Zeitlimit. Für die anschließende
+Nutzung der ursprünglichen Variante liegt inzwischen die Benutzerbestätigung
+über **etwa 1,5 Stunden stabilen Betrieb** vor. Längere Laufzeiten und ein
+Dauertest der später paketierten Version sind weiterhin offen. Eine belastbare
 Messung von Latenz, Bildfrequenz oder Bildqualität am Raumbildschirm liegt nicht vor.
 
 ## Geprüft an der Paketversion
@@ -114,7 +118,7 @@ Ubuntu**.
 | Standby / Zuklappen | Verbindungsverlust wurde im ursprünglichen Aufbau beobachtet und ein Neustart ausgeführt; keine dokumentierte erfolgreiche Wiederübertragung mit der paketierten `wpp20 restart`-Funktion nach Standby |
 | Automatische Wiederverbindung | Nicht implementiert; nach Standby ist ein manueller Neustart mit erneuter Bildschirmauswahl vorgesehen |
 | Fehlerbehandlung während der Übertragung | Portalabbruch, gesperrter Desktop, USB-Abziehen, Empfängerneustart und Reichweitenverlust sind in der Paketversion nicht systematisch als Live-Szenarien geprüft |
-| Dauerbetrieb | Kein protokollierter mehrstündiger Test, keine Serie wiederholter Standby-/Reconnect-Zyklen oder CPU-/Speichermessung |
+| Weitergehender Dauerbetrieb | Ursprüngliche Variante: etwa 1,5 Stunden stabil laut Benutzerbestätigung; längere Laufzeiten, ein Dauertest der Paketversion, wiederholte Standby-/Reconnect-Zyklen und CPU-/Speichermessungen stehen aus |
 | Audio und Konferenzfunktionen | Tonübertragung, Kamera, Mikrofon, Touch/Rückkanal und Videokonferenzbetrieb nicht verifiziert; die Bridge transportiert Bildschirmbilder |
 | Anzeigevarianten | HiDPI, verschiedene Skalierungsfaktoren, HDR, 4K-Ausgabe, Monitorwechsel im Betrieb, Fensterfreigabe und mehrere gleichzeitige Streams nicht geprüft; implementiert ist die Auswahl eines Monitors |
 | Andere Plattformen | Kein Hardwaretest unter Ubuntu/Debian, anderen Fedora-Versionen, KDE, anderen Wayland-Compositors, einer nativen X11-Sitzung oder ARM |

@@ -83,6 +83,8 @@ siehe [Testumfang und bestätigter Stand](testumfang.md).
 - WPP20 USB-ID `6993:b022`, Firmware `81.354.0.25`;
 - Launcher `1.0.0.119`, Yealink-MCore-Raumsystem;
 - tatsächlich beobachtete Bildübertragung, anschließend genau ein Mauszeiger.
+- etwa 1,5 Stunden stabiler Betrieb der ursprünglichen Variante am 21. September
+  2026, vom Benutzer am Folgetag bestätigt.
 
 Automatisierte Tests prüfen zusätzlich Versionsschutz, Patch-Idempotenz,
 Archivschutz und Gerätezuordnung. Sie ersetzen keinen praktischen Test mit
